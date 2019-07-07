@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Meetup Tutorial',
+    title: 'Campinas Front-end',
     description: 'Projeto usado para fazer o meetup no Campinas Front-end',
     author: '@luanorlandi',
   },
