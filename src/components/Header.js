@@ -22,7 +22,7 @@ const Header = () => {
         <Link className="header__item" to="/">{title}</Link>
       </div>
       <div className="header__items">
-        <Link className="header__item" to="/home">Home</Link>
+        <Link className="header__item" to="/">Inicial</Link>
         <Link className="header__item" to="/meetups">Eventos</Link>
         <Link className="header__item" to="/faq">FAQ</Link>
       </div>
