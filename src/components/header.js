@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 
-import './header.css';
+import './Header.css';
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className="header__items">
         <Link className="header__item" to="/home">Home</Link>
-        <Link className="header__item" to="/meetups">Meetups</Link>
+        <Link className="header__item" to="/meetups">Eventos</Link>
         <Link className="header__item" to="/faq">FAQ</Link>
       </div>
     </header>

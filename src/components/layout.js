@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from './header';
-import 'reset-css/reset.css';
-import './layout.css';
+import Header from './Header';
+import './Layout.css';
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="layout">
     <Header />
-    <main>{children}</main>
-    <footer className="footer">
-      <div className="footer__container">
+    <main className="layout__main">{children}</main>
+    <footer className="layout__footer">
+      <div className="layout__footer-container">
         ©
         {' '}
         {new Date().getFullYear()}
