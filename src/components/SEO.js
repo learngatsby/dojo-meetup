@@ -57,7 +57,7 @@ const SEO = ({
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  lang: PropTypes.string.isRequired,
+  lang: PropTypes.string,
   keywords: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
 };
@@ -65,6 +65,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: '',
+  lang: 'en',
   meta: [],
   keywords: '',
 };
