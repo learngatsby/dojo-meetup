@@ -1,0 +1,12 @@
+.card {
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  width: 300px;
+  text-decoration: none;
+  margin: 8px;
+}
+
+.card__title {
+  padding: 8px;
+}
