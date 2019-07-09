@@ -20,7 +20,7 @@ export const queryLogo = graphql`
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Inicial" />
+    <SEO />
     <div className="home__logo">
       <Image fluid={data.file.childImageSharp.fluid} />
     </div>
