@@ -28,7 +28,7 @@ body {
   max-width: 1024px;
   margin: auto;
   padding: 1rem;
-  padding-bottom: 60px;
+  padding-bottom: 170px;
 }
 
 .layout__footer {
@@ -36,9 +36,11 @@ body {
   bottom: 0;
   width: 100%;
   padding: 1rem 0;
+  font-size: 0.8rem;
 }
 
 .layout__footer-container {
   max-width: 1024px;
   margin: auto;
+  text-align: center;
 }

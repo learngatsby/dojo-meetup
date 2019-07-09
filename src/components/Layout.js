@@ -10,12 +10,20 @@ const Layout = ({ children }) => (
     <main className="layout__main">{children}</main>
     <footer className="layout__footer">
       <div className="layout__footer-container">
-        ©
-        {' '}
-        {new Date().getFullYear()}
-        , Built with
-        {' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <p>
+          Site feito com
+          {' '}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          {' '}
+          para um
+          {' '}
+          <a href="https://www.meetup.com/campinas-frontend/events/262413777/">meetup no Campinas Front-end</a>
+        </p>
+        <p>Veja código fonte no Github</p>
+        <a href="https://github.com/luanorlandi/meetup-tutorial">github.com/luanorlandi/meetup-tutorial</a>
+        <noscript>
+          <p>Este site funciona melhor com JavaScript habilitado</p>
+        </noscript>
       </div>
     </footer>
   </div>
