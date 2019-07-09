@@ -12,6 +12,7 @@ const detailsQuery = graphql`
     site {
       siteMetadata {
         title
+        description
         author
       }
     }
@@ -33,18 +34,18 @@ const SEO = ({
         title={title || data.site.siteMetadata.title}
         titleTemplate={title && `%s | ${data.site.siteMetadata.title}`}
         meta={[
-          { name: 'description', content: description },
+          { name: 'description', content: description || data.site.siteMetadata.description },
           { name: 'keywords', content: keywords },
           { name: 'twitter:card', content: 'summary' },
           { name: 'twitter:creator', content: data.site.siteMetadata.author },
           { name: 'twitter:title', content: title },
-          { name: 'twitter:description', content: description },
+          { name: 'twitter:description', content: description || data.site.siteMetadata.description },
           { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
+          { property: 'og:description', content: description || data.site.siteMetadata.description },
           { property: 'og:type', content: 'website' },
           // { property: 'og:url', content: 'https://luanorlandi.github.io/' },
           // { property: 'og:image', content: `${HOST}${ogImage}` },
-          { property: 'og:image:alt', content: description },
+          { property: 'og:image:alt', content: description || data.site.siteMetadata.description },
           { property: 'og:image:type', content: 'image/jpg' },
           { property: 'og:image:width', content: '1828' },
           { property: 'og:image:height', content: '660' },
@@ -64,7 +65,6 @@ SEO.propTypes = {
 
 SEO.defaultProps = {
   title: null,
-  description: '',
   lang: 'en',
   meta: [],
   keywords: '',

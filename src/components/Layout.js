@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
           {' '}
           <a href="https://www.meetup.com/campinas-frontend/events/262413777/">meetup no Campinas Front-end</a>
         </p>
-        <p>Veja código fonte no Github</p>
+        <p>Veja o código fonte no Github:</p>
         <a href="https://github.com/luanorlandi/meetup-tutorial">github.com/luanorlandi/meetup-tutorial</a>
         <noscript>
           <p>Este site funciona melhor com JavaScript habilitado</p>
