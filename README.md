@@ -186,7 +186,7 @@ Você vai precisar subir no GitHub, GitLab ou Bitbucket o seu projeto antes.
 
 https://app.netlify.com/start
 
-Agora com o site em produção, teste como ele PWA, essa é outra configuração que já vem (quase) pronta.
+Agora com o site em produção, faço um audit no Developer Tools e teste como o site em PWA, esta é outra configuração que já vem (quase) pronta.
 
 Na verdade, ela já vem no [template default do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default), é só adicionar essas linhas no gatsby-condig.js
 
