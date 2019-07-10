@@ -1,0 +1,31 @@
+exports.createPages = async ({ actions, graphql }) => {
+  const result = await graphql(`
+    {
+      allSanityPost {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  const posts = result.data.allSanityPost.edges.map(({ node }) => node);
+
+  posts.forEach((post) => {
+    actions.createPage({
+      path: post.slug.current,
+      component: require.resolve('./src/templates/Post.js'),
+      context: {
+        slug: post.slug.current,
+      },
+    });
+  });
+};

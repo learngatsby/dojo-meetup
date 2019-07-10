@@ -8,5 +8,12 @@
 }
 
 .card__title {
-  padding: 8px;
+  padding: 10px;
+  color: #111;
+  border-top: 1px solid #cfcfcf;
+  font-weight: 700;
+}
+
+.card__image {
+  height: 200px;
 }
