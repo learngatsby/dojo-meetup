@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-// import ogImage from 'assets/images/logo-2.jpg';
+import ogImage from '../assets/images/logo-2.jpg';
 
-// const HOST = process.env.NODE_ENV === 'production' ? 'https://luanorlandi.github.io' : '';
+const HOST = process.env.NODE_ENV === 'production' ? 'https://dojo-gatsby.netlify.com' : '';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -43,8 +43,8 @@ const SEO = ({
           { property: 'og:title', content: title },
           { property: 'og:description', content: description || data.site.siteMetadata.description },
           { property: 'og:type', content: 'website' },
-          // { property: 'og:url', content: 'https://luanorlandi.github.io/' },
-          // { property: 'og:image', content: `${HOST}${ogImage}` },
+          { property: 'og:url', content: 'https://dojo-gatsby.netlify.com/' },
+          { property: 'og:image', content: `${HOST}${ogImage}` },
           { property: 'og:image:alt', content: description || data.site.siteMetadata.description },
           { property: 'og:image:type', content: 'image/jpg' },
           { property: 'og:image:width', content: '1828' },
