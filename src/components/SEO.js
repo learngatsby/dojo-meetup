@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import ogImage from '../assets/images/logo-2.JPG';
+import ogImage from '../assets/images/logoPreview.jpg';
 
 const HOST = process.env.NODE_ENV === 'production' ? 'https://dojo-gatsby.netlify.com' : '';
 
