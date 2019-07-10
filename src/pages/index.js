@@ -1,22 +1,10 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Logo from '../assets/images/logo.png';
 import '../styles/home.css';
-
-export const queryLogo = graphql`
-  query {
-    file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1024) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
 
 const IndexPage = () => (
   <Layout>
