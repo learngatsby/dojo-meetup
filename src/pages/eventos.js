@@ -1,58 +1,53 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Image from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Card from '../components/Card';
 import '../styles/events.css';
 
-export const query = graphql`
-  query {
-    allSanityPost(sort: {order: ASC, fields: title}) {
-      edges {
-        node {
-          slug {
-            current
-          }
-          title
-          mainImage {
-            asset {
-              fluid {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-const Events = ({ data }) => (
+const Events = () => (
   <Layout>
     <SEO title="Eventos" />
     <h1>Eventos</h1>
     <div className="events__cards">
-      {data.allSanityPost.edges.map(post => (
-        <Card
-          title={post.node.title}
-          link={post.node.slug.current}
-          image={(
-            <Image
-              fluid={post.node.mainImage.asset.fluid}
-              alt={post.node.tile}
-            />
-          )}
-        />
-      ))}
+      <Card
+        title="Dojo - Aprenda a criar seus sites usando Gatsby"
+        link="https://www.meetup.com/campinas-frontend/events/262413777/"
+        image={(
+          <img
+            height="200px"
+            width="300px"
+            src="https://snag.gy/wXNtu5.jpg"
+            alt="Logo do Gatsby"
+          />
+        )}
+      />
+      <Card
+        title="Dojo - Testando com Cypress"
+        link="https://www.meetup.com/campinas-frontend/events/262662805/"
+        image={(
+          <img
+            height="200px"
+            width="300px"
+            src="https://snag.gy/ym0PSv.jpg"
+            alt="Logo do Cypress"
+          />
+        )}
+      />
+      <Card
+        title="Front in Campinas 2019"
+        link="https://frontincampinas.com.br/"
+        image={(
+          <img
+            height="200px"
+            width="300px"
+            src="https://snag.gy/86uOhH.jpg"
+            alt="Logo do Front in Campinas"
+          />
+        )}
+      />
     </div>
   </Layout>
 );
-
-Events.propTypes = {
-  data: PropTypes.object.isRequired,
-};
 
 export default Events;

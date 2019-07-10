@@ -29,12 +29,5 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-mdx',
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        projectId: 'q1bu2bxu',
-        dataset: 'production',
-      },
-    },
   ],
 };
