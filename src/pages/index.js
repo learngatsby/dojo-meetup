@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Image from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Logo from '../assets/images/logo.png';
 import '../styles/home.css';
 
 export const queryLogo = graphql`
@@ -18,11 +18,11 @@ export const queryLogo = graphql`
   }
 `;
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
     <div className="home__logo">
-      <img src={Logo} alt="Logo do Campinas Front-end" />
+      <Image fluid={data.file.childImageSharp.fluid} alt="Logo do Campinas Front-end" />
     </div>
     <h1>Eventos</h1>
     <p>Participe dos meetups e outros eventos do Campinas Front-end, veja quais já ocorreram:</p>
