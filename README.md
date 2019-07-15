@@ -64,16 +64,12 @@ O webpack no Gatsby é configurado para gerar um site de **alta performance**. V
 
 Além de rodar o React em Node para gerar as páginas, um site em Gatsby também roda React no browser. Depois de carregado no browser, o site se transforma numa aplicação SPA.
 
-3. Apague um dos arquivos, `public/index.html` ou `public/faq/index.html`
-4. Veja que isso não impede de navegar na página que você apagou, o arquivo HTML só é útil para o **primeiro load** do site, o resto é a aplicação SPA renderizando
-5. Atualize a página enquanto está na que deletou, deve dar um 404, porque não achou o HTML
-
 Reparou na quantidade de arquivo JavaScript que gerou no `public/`?
 
 Gatsby já trata [code split](https://reactjs.org/docs/code-splitting.html) para evitar um bundle pesado gerado pelo webpack.
 
-6. Com as páginas normal de volta, rodando em build, coloque em janela anônima, deixe o Developer Tools aberto na aba Network e desabilite o cache
-7. Atualize a página, e passe o mouse nos links, veja que um JavaScript é carregado, são os componentes necessários para renderizar a página. Ao clickar, ao clickar no link a página carrega na hora se já terminou a request
+3. Rodando em build, coloque em janela anônima, deixe o Developer Tools aberto na aba Network e desabilite o cache
+4. Atualize a página, e passe o mouse nos links, veja que um JavaScript é carregado, são os componentes necessários para renderizar a página. Ao clickar, ao clickar no link a página carrega na hora se já terminou a request
 
 É uma técnica sútil, mas faz muita diferença, e já vem pronta no Gatsby.
 
