@@ -104,8 +104,9 @@ import { graphql } from 'gatsby';
 Esse é um playground para queries que o site pode fazer, use o explorador na esquerda, ele facilita (muito) para montar queries sem errar sintaxe.
 
 3. No explorador, coloque `file` -> `relativePath:`, os campos em roxo são variáveis, coloque o nome da imagem logo.png em `eq:`
-4. Coloque na query `childImageSharp` -> `maxWidth:` com 1024 (tamanho máximo no container de CSS)
-5. Complete a query colocando `src` e execute a query, deve trazer um resultado assim:
+4. Coloque na query `childImageSharp`
+5. Coloque na query `fluid` -> `maxWidth:` com 1024 (tamanho máximo no container de CSS)
+6. Complete a query colocando `src` e execute a query, deve trazer um resultado assim:
 
 ```json
 {
@@ -121,7 +122,7 @@ Esse é um playground para queries que o site pode fazer, use o explorador na es
 }
 ```
 
-6. No código da página coloque a query
+7. No código da página coloque a query
 
 ```jsx
 export const queryLogo = graphql`
@@ -137,7 +138,7 @@ Dentro do componente, você já consegue pegar a imagem com `data.file.childImag
 
 Para finalizar, Gatsby tem um componente para tratar a imagem
 
-7. Coloque no final da query um `...GatsbyImageSharpFluid`, ela deve ficar assim:
+8. Coloque no final da query um `...GatsbyImageSharpFluid`, ela deve ficar assim:
 
 ```graphql
   fluid(maxWidth: 1024) {
@@ -145,7 +146,7 @@ Para finalizar, Gatsby tem um componente para tratar a imagem
   }
 ```
 
-8. Troque o `<img />` pelo componente `<Image />`. Lembrando que `data` vem de prop.
+9. Troque o `<img />` pelo componente `<Image />`. Lembrando que `data` vem de prop.
 
 Teste atualizando a página, o resultado é muito parecido com imagens no medium.
 
