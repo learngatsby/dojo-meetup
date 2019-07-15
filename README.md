@@ -46,8 +46,7 @@ Os componentes em `src/pages` (e sua estrutura de diretório) criam as páginas 
 4. Veja o resultado em http://localhost:8000/faq
 5. Adicione um link para a página no header, usando o componente `Link`
 6. Rode um build do projeto `npm run build`
-7. Rode um servidor local agora com a versão de build (gerado em `src/public/`), use `npm run serve`
-8. Acesse `http://localhost:9000/faq` e verifique no source da página (no Chrome: botão direito -> View source), veja se o que colocou no render do componente está lá
+7. Veja o resultado em `public/`, encontre o arquivo HTML da página de FAQ e verifique que seu conteúdo foi gerado lá dentro do `<body />` do HTML
 
 Gatsby é um gerador de site **estático**, o conteúdo dentro da página do FAQ deve estar dentro do HTML. O que não aconteceria em uma aplicação que só usa React.
 
@@ -68,15 +67,15 @@ Reparou na quantidade de arquivo JavaScript que gerou no `public/`?
 
 Gatsby já trata [code split](https://reactjs.org/docs/code-splitting.html) para evitar um bundle pesado gerado pelo webpack.
 
-3. Rodando em build, coloque em janela anônima, deixe o Developer Tools aberto na aba Network e desabilite o cache
-4. Atualize a página, e passe o mouse nos links, veja que um JavaScript é carregado, são os componentes necessários para renderizar a página. Ao clickar, ao clickar no link a página carrega na hora se já terminou a request
+3. Rode um servidor local agora com a versão de build (gerado em `src/public/`), use `npm run serve` e 
+4. Acesse http://localhost:9000/ em janela anônima, deixe o Developer Tools aberto na aba Network e desabilite o cache
+5. Atualize a página, e passe o mouse nos links, veja que um JavaScript é carregado, são os componentes necessários para renderizar a página. Ao clickar, ao clickar no link a página carrega na hora se já terminou a request
 
-É uma técnica sútil, mas faz muita diferença, e já vem pronta no Gatsby.
+É uma técnica sútil que faz muita diferença em sites grandes, e já vem pronta no Gatsby.
 
 Mais sobre web performance com Gatsby, veja esse artigo:
 
 https://www.freecodecamp.org/news/how-gatsby-is-so-blazing-fast-c99a6f2d405e/
-
 
 ## 3 - Imagens
 
