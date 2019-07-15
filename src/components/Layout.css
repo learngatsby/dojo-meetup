@@ -40,6 +40,7 @@ body {
 }
 
 .layout__footer-container {
+  padding: 1rem;
   max-width: 1024px;
   margin: auto;
   text-align: center;
