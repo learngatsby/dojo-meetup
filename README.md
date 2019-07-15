@@ -169,13 +169,14 @@ Vamos finalizar a página de FAQ usando um plugin de MDX.
 MDX é uma extensão de arquivo markdown (.md) usando React, no Gatsby tem um plugin para usar isso: [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#installation).
 
 1. Veja na documentação dele como usar, as dependências no npm já estão instaladas
-2. Crie a página `pages/faq.mdx`
-3. Adicione o Layout, veja que tem dois jeitos de fazer:
+2. Você vai precisa alterar o arquivo de puglins, toda alteração no `gatsby-config.js` precisa reiniciar o `npm start` para fazer efeito
+3. Crie a página `pages/faq.mdx`
+4. Adicione o Layout, veja que tem dois jeitos de fazer:
 
 https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#default-layouts
 
-4. Coloque o componente de `<SEO title="FAQ" />`
-5. No projeto tem um arquivo `/campinas-front-end-faq.md` com um conteúdo para colocar na página
+5. Coloque o componente de `<SEO title="FAQ" />`
+6. No projeto tem um arquivo `/campinas-front-end-faq.md` com um conteúdo para colocar na página
 
 ## 5. Deploy
 
@@ -189,7 +190,7 @@ https://app.netlify.com/start
 
 Agora com o site em produção, faço um audit no Developer Tools e teste como o site em PWA, esta é outra configuração que já vem (quase) pronta.
 
-Na verdade, ela já vem no [template default do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default), é só adicionar essas linhas no gatsby-condig.js
+Na verdade, ela já vem no [template default do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default), é só adicionar essas linhas no gatsby-config.js
 
 ```js
 module.exports = {
